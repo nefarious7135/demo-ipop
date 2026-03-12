@@ -1,0 +1,12 @@
+{
+  "add": {
+    "Action_name": "AUTOMATE_AC_NAME",
+    "Display_name": "add_display_ac",
+    "Description": "test 1234"
+  },
+  "edit": {
+    "Action_name": "AUTOMATE_AC_NAME",
+    "Display_name": "edit_display_ac",
+    "Description": "test 1234"
+  }
+}

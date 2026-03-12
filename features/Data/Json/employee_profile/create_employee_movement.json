@@ -1,0 +1,16 @@
+{
+  "add": {
+    "Movement_Type": "Hire",
+    "Movement_Reason": "New Hire",
+    "Title": "นาย - Mister",
+    "First_Name_TH": "เทส",
+    "Last_Name_TH": "นะครับ"
+  },
+  "edit": {
+    "Movement_Type": "Hire",
+    "Movement_Reason": "New Hire",
+    "Title": "นาย - Mister",
+    "First_Name_TH": "เทส",
+    "Last_Name_TH": "นะครับ"
+  }
+}
