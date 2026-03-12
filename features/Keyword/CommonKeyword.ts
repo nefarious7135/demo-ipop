@@ -1,5 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { locatorCommon } from '../Locator/common';
+import { locatorCommon } from '../Locator/Common';
 
 
 export const UI = {

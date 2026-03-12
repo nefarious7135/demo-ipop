@@ -12,7 +12,7 @@ import { randomThaiName, random4Chars } from '../Keyword/CommonKeyword';
 import { MovementPage } from '../Page/EmployeeMovement';
 
 // 🔹 Locator
-import { locatorCommon } from '../Locator/common';
+import { locatorCommon } from '../Locator/Common';
 import { locatorEmp } from '../Locator/EmployeeProfile';
 import { locatorTm } from '../Locator/timeManagement';
 
@@ -130,11 +130,11 @@ export class FeatureHelper {
 
 		const menu = this.page.locator(locatorEmp.employee_profile);
 		const subMenu = this.page.locator(locatorEmp.employee_profile_maintenance);
-		
+
 		await expect(menu).toBeVisible();
 		await menu.hover();
 		await menu.click();
-		
+		await this.page.waitForTimeout(500);
 		await expect(subMenu).toBeVisible();
 		await subMenu.click();
 
@@ -151,7 +151,7 @@ export class FeatureHelper {
 		await expect(menu).toBeVisible();
 		await menu.hover();
 		await menu.click();
-		
+
 		await expect(subMenu).toBeVisible();
 		await subMenu.click();
 
@@ -168,7 +168,7 @@ export class FeatureHelper {
 		await expect(menu).toBeVisible();
 		await menu.hover();
 		await menu.click();
-		
+
 		await expect(subMenu).toBeVisible();
 		await subMenu.click();
 
@@ -185,7 +185,7 @@ export class FeatureHelper {
 		await expect(menu).toBeVisible();
 		await menu.hover();
 		await menu.click();
-		
+
 		await expect(subMenu).toBeVisible();
 		await subMenu.click();
 
