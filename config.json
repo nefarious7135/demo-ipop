@@ -1,0 +1,5 @@
+{
+  "create_employee_movement": "features/Data/Json/employee_profile/create_employee_movement.json",
+  "update_employee_movement": "features/Data/Json/employee_profile/update_employee_movement.json"
+  
+}
