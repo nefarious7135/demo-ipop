@@ -21,7 +21,7 @@ export default defineConfig({
   use: {
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    headless: false,
+    headless: true,
     actionTimeout: 10000,    // 🕒 timeout ของ action เช่น click(), fill()
     navigationTimeout: 40000,
     trace: 'on-first-retry',
