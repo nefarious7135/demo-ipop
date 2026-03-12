@@ -14,7 +14,7 @@ import { MovementPage } from '../Page/EmployeeMovement';
 // 🔹 Locator
 import { locatorCommon } from '../Locator/Common';
 import { locatorEmp } from '../Locator/EmployeeProfile';
-import { locatorTm } from '../Locator/timeManagement';
+import { locatorTm } from '../Locator/TimeManagement';
 
 // 🔹 Data
 import { JSONFile } from '../Keyword/CommonFileKeyword';
