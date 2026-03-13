@@ -86,7 +86,8 @@ jobs:
           password: ${{ secrets.PASSWORD_MAIL }}
 
           subject: "Playwright Test Result - ${{ job.status }}"
-          to: sutat_1604@hotmail.com
+          to: sutat.up@pinno.io
+          cc: sutat_1604@hotmail.com, bigkk2008@hotmail.com
           from: Playwright CI <${{ secrets.USERNAME_MAIL }}>
 
           body: |
