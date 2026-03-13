@@ -82,12 +82,12 @@ jobs:
           server_port: 465
           secure: true
 
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
+          username: ${{ secrets.USERNAME_MAIL}}
+          password: ${{ secrets.PASSWORD_MAIL }}
 
           subject: "Playwright Test Result - ${{ job.status }}"
           to: sutat_1604@hotmail.com
-          from: Playwright CI <${{ secrets.MAIL_USERNAME }}>
+          from: Playwright CI <${{ secrets.USERNAME_MAIL }}>
 
           body: |
             Playwright CI Finished 🚀
