@@ -1,9 +1,9 @@
 {
   "config": {
-    "configFile": "E:\\CI\\basic_playwright_ts-main\\basic_playwright_ts-main\\playwright.config.ts",
-    "rootDir": "E:/CI/basic_playwright_ts-main/basic_playwright_ts-main/tests",
+    "configFile": "/Users/gossilla/Documents/Pinno/demo-ipop/playwright.config.ts",
+    "rootDir": "/Users/gossilla/Documents/Pinno/demo-ipop/tests",
     "forbidOnly": false,
-    "fullyParallel": true,
+    "fullyParallel": false,
     "globalSetup": null,
     "globalTeardown": null,
     "globalTimeout": 0,
@@ -14,11 +14,30 @@
       "actualWorkers": 1
     },
     "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gossilla/Documents/Pinno/demo-ipop/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Demo-Ipop",
+        "name": "Demo-Ipop",
+        "testDir": "/Users/gossilla/Documents/Pinno/demo-ipop/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 200000
+      }
+    ],
+    "quiet": false,
     "reporter": [
       [
         "html",
         {
-          "open": "never"
+          "open": "always"
         }
       ],
       [
@@ -32,109 +51,193 @@
       "max": 5,
       "threshold": 300000
     },
-    "quiet": false,
-    "projects": [
-      {
-        "outputDir": "E:/CI/basic_playwright_ts-main/basic_playwright_ts-main/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
-        "id": "chromium",
-        "name": "chromium",
-        "testDir": "E:/CI/basic_playwright_ts-main/basic_playwright_ts-main/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 30000
-      }
-    ],
+    "runAgents": "none",
     "shard": null,
     "tags": [],
     "updateSnapshots": "missing",
     "updateSourceMethod": "3way",
-    "version": "1.57.0",
+    "version": "1.58.2",
     "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "pdf-test.spec.ts",
-      "file": "pdf-test.spec.ts",
+      "title": "employee profile/create-employee_movement.spec.ts",
+      "file": "employee profile/create-employee_movement.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "download pdf",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Demo IPOP - Dev",
+          "file": "employee profile/create-employee_movement.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Create New Employee Movement",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 7314,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 200000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Demo-Ipop",
+                  "projectName": "Demo-Ipop",
+                  "results": [
                     {
-                      "text": "📥 File name: invoice-sample.pdf\n"
-                    },
-                    {
-                      "text": "📦 File size (bytes): \u001b[33m24943\u001b[39m\n"
-                    },
-                    {
-                      "text": "📄 Number of pages: \u001b[33m1\u001b[39m\n"
-                    },
-                    {
-                      "text": "===== PDF TEXT (first 1000 chars) =====\n"
-                    },
-                    {
-                      "text": "\n\nYesLogic Pty. Ltd.\n7 / 39 Bouverie St\nCarlton VIC 3053\nAustralia\nwww.yeslogic.com\nABN 32 101 193 560\nInInvvoicoicee\nCustomer Name\nStreet\nPostcode City\nCountry\nInvoice date:Nov 26, 2016\nInvoice number:161126\nPayment due:30 days after invoice date\nDescriptionFromUntilAmount\nPrince Upgrades & SupportNov 26, 2016Nov 26, 2017USD $950.00\nTotalUSD $950.00\nPlease transfer amount to:\nBank account name:Yes Logic Pty Ltd\nName of Bank:Commonwealth Bank of Australia (CBA)\nBank State Branch (BSB):063010\nBank State Branch (BSB):063010\nBank State Branch (BSB):063019\nBank account number:13201652\nBank SWIFT code:CTBAAU2S\nBank address:231 Swanston St, Melbourne, VIC 3000, Australia\nThe BSB number identifies a branch of a financial institution in Australia. When transferring money to Australia, the\nBSB number is used together with the bank account number and the SWIFT code. Australian banks do not use IBAN\nnumbers.\nwww.yeslogic.com\n"
-                    },
-                    {
-                      "text": "=======================================\n"
-                    },
-                    {
-                      "text": "📄 Split by lines:\n"
-                    },
-                    {
-                      "text": "[\n  \u001b[32m''\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'YesLogic Pty. Ltd.'\u001b[39m,\n  \u001b[32m'7 / 39 Bouverie St'\u001b[39m,\n  \u001b[32m'Carlton VIC 3053'\u001b[39m,\n  \u001b[32m'Australia'\u001b[39m,\n  \u001b[32m'www.yeslogic.com'\u001b[39m,\n  \u001b[32m'ABN 32 101 193 560'\u001b[39m,\n  \u001b[32m'InInvvoicoicee'\u001b[39m,\n  \u001b[32m'Customer Name'\u001b[39m,\n  \u001b[32m'Street'\u001b[39m,\n  \u001b[32m'Postcode City'\u001b[39m,\n  \u001b[32m'Country'\u001b[39m,\n  \u001b[32m'Invoice date:Nov 26, 2016'\u001b[39m,\n  \u001b[32m'Invoice number:161126'\u001b[39m,\n  \u001b[32m'Payment due:30 days after invoice date'\u001b[39m,\n  \u001b[32m'DescriptionFromUntilAmount'\u001b[39m,\n  \u001b[32m'Prince Upgrades & SupportNov 26, 2016Nov 26, 2017USD $950.00'\u001b[39m,\n  \u001b[32m'TotalUSD $950.00'\u001b[39m,\n  \u001b[32m'Please transfer amount to:'\u001b[39m,\n  \u001b[32m'Bank account name:Yes Logic Pty Ltd'\u001b[39m,\n  \u001b[32m'Name of Bank:Commonwealth Bank of Australia (CBA)'\u001b[39m,\n  \u001b[32m'Bank State Branch (BSB):063010'\u001b[39m,\n  \u001b[32m'Bank State Branch (BSB):063010'\u001b[39m,\n  \u001b[32m'Bank State Branch (BSB):063019'\u001b[39m,\n  \u001b[32m'Bank account number:13201652'\u001b[39m,\n  \u001b[32m'Bank SWIFT code:CTBAAU2S'\u001b[39m,\n  \u001b[32m'Bank address:231 Swanston St, Melbourne, VIC 3000, Australia'\u001b[39m,\n  \u001b[32m'The BSB number identifies a branch of a financial institution in Australia. When transferring money to Australia, the'\u001b[39m,\n  \u001b[32m'BSB number is used together with the bank account number and the SWIFT code. Australian banks do not use IBAN'\u001b[39m,\n  \u001b[32m'numbers.'\u001b[39m,\n  \u001b[32m'www.yeslogic.com'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "🔎 Regex match result: [\n  \u001b[32m'Invoice number:161126'\u001b[39m,\n  \u001b[32m'161126'\u001b[39m,\n  index: \u001b[33m187\u001b[39m,\n  input: \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'YesLogic Pty. Ltd.\\n'\u001b[39m +\n    \u001b[32m'7 / 39 Bouverie St\\n'\u001b[39m +\n    \u001b[32m'Carlton VIC 3053\\n'\u001b[39m +\n    \u001b[32m'Australia\\n'\u001b[39m +\n    \u001b[32m'www.yeslogic.com\\n'\u001b[39m +\n    \u001b[32m'ABN 32 101 193 560\\n'\u001b[39m +\n    \u001b[32m'InInvvoicoicee\\n'\u001b[39m +\n    \u001b[32m'Customer Name\\n'\u001b[39m +\n    \u001b[32m'Street\\n'\u001b[39m +\n    \u001b[32m'Postcode City\\n'\u001b[39m +\n    \u001b[32m'Country\\n'\u001b[39m +\n    \u001b[32m'Invoice date:Nov 26, 2016\\n'\u001b[39m +\n    \u001b[32m'Invoice number:161126\\n'\u001b[39m +\n    \u001b[32m'Payment due:30 days after invoice date\\n'\u001b[39m +\n    \u001b[32m'DescriptionFromUntilAmount\\n'\u001b[39m +\n    \u001b[32m'Prince Upgrades & SupportNov 26, 2016Nov 26, 2017USD $950.00\\n'\u001b[39m +\n    \u001b[32m'TotalUSD $950.00\\n'\u001b[39m +\n    \u001b[32m'Please transfer amount to:\\n'\u001b[39m +\n    \u001b[32m'Bank account name:Yes Logic Pty Ltd\\n'\u001b[39m +\n    \u001b[32m'Name of Bank:Commonwealth Bank of Australia (CBA)\\n'\u001b[39m +\n    \u001b[32m'Bank State Branch (BSB):063010\\n'\u001b[39m +\n    \u001b[32m'Bank State Branch (BSB):063010\\n'\u001b[39m +\n    \u001b[32m'Bank State Branch (BSB):063019\\n'\u001b[39m +\n    \u001b[32m'Bank account number:13201652\\n'\u001b[39m +\n    \u001b[32m'Bank SWIFT code:CTBAAU2S\\n'\u001b[39m +\n    \u001b[32m'Bank address:231 Swanston St, Melbourne, VIC 3000, Australia\\n'\u001b[39m +\n    \u001b[32m'The BSB number identifies a branch of a financial institution in Australia. When transferring money to Australia, the\\n'\u001b[39m +\n    \u001b[32m'BSB number is used together with the bank account number and the SWIFT code. Australian banks do not use IBAN\\n'\u001b[39m +\n    \u001b[32m'numbers.\\n'\u001b[39m +\n    \u001b[32m'www.yeslogic.com'\u001b[39m,\n  groups: \u001b[90mundefined\u001b[39m\n]\n"
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15441,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ fullPath: /Users/gossilla/Documents/Pinno/demo-ipop/tests/employee profile/create-employee_movement.spec.ts\n"
+                        },
+                        {
+                          "text": "✅ noExt: create-employee_movement.spec\n"
+                        },
+                        {
+                          "text": "✅ fileName: create-employee_movement\n"
+                        },
+                        {
+                          "text": "✅ ENV: demo\n"
+                        },
+                        {
+                          "text": "✅ MAIN_URL: https://demo.ipop.iamconsulting.co.th\n"
+                        },
+                        {
+                          "text": "--------------------- init data ------------------\n"
+                        },
+                        {
+                          "text": "✅ file Names: create-employee_movement\n"
+                        },
+                        {
+                          "text": "✅ functions: create\n"
+                        },
+                        {
+                          "text": "✅ mapkey : create-employee_movement\n"
+                        },
+                        {
+                          "text": "✅ Path json: features/Data/Json/employee_profile/create_employee_movement.json\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Set_data_init\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Set_goto_Demo_Ipop\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Login_Hr\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "User ENV: jklein\n"
+                        },
+                        {
+                          "text": "Password ENV: Demo@1234\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Select_Employee_Profile\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Select_Employee_Movement\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Create_New_Employee_Movement\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Movement_Type: Hire\n"
+                        },
+                        {
+                          "text": "✅ Movement_Reason:  New Hire\n"
+                        },
+                        {
+                          "text": "New Employee Code: 10001453\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Select_Employee_Movement\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        },
+                        {
+                          "text": "✅ Filter_Employee_Movement\n"
+                        },
+                        {
+                          "text": "-------------------------\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-13T02:49:41.732Z",
+                      "annotations": [],
+                      "attachments": []
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-02-14T12:06:32.456Z",
-                  "annotations": [],
-                  "attachments": []
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "5e31d434f5ce878c2d7d-2983039dcf0547c64b11",
+              "file": "employee profile/create-employee_movement.spec.ts",
+              "line": 12,
+              "column": 7
             }
-          ],
-          "id": "c9c9ca67648f09d3acea-a6c97db0301c8d64d985",
-          "file": "pdf-test.spec.ts",
-          "line": 4,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-14T12:06:31.555Z",
-    "duration": 8395.722999997437,
+    "startTime": "2026-03-13T02:49:40.752Z",
+    "duration": 17236.341000000015,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

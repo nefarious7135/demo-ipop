@@ -151,7 +151,7 @@ export class FeatureHelper {
 		await expect(menu).toBeVisible();
 		await menu.hover();
 		await menu.click();
-
+		await this.page.waitForTimeout(500);
 		await expect(subMenu).toBeVisible();
 		await subMenu.click();
 
@@ -168,7 +168,7 @@ export class FeatureHelper {
 		await expect(menu).toBeVisible();
 		await menu.hover();
 		await menu.click();
-
+		await this.page.waitForTimeout(500);
 		await expect(subMenu).toBeVisible();
 		await subMenu.click();
 
@@ -185,7 +185,7 @@ export class FeatureHelper {
 		await expect(menu).toBeVisible();
 		await menu.hover();
 		await menu.click();
-
+		await this.page.waitForTimeout(500);
 		await expect(subMenu).toBeVisible();
 		await subMenu.click();
 
@@ -217,6 +217,11 @@ export class FeatureHelper {
 		const name = randomThaiName();
 		await movementPage.Movement_Type(Add.Movement_Type);
 		await movementPage.Movement_Reason(Add.Movement_Reason);
+		const newEmpCode = await this.page.locator(locatorEmp.empCodegen).inputValue();
+
+		await JSONFile.updateJsonFile('LocalStorage/LocalStorage.json', {
+			EmpCode: newEmpCode,
+		});
 		await movementPage.Title(Add.Title);
 		await movementPage.First_Name_TH(name.firstNameTH);
 		await movementPage.Last_Name_TH(name.lastNameTH);
@@ -224,10 +229,31 @@ export class FeatureHelper {
 		// await expect(this.page.locator(locatorCommon.yesButton)).toBeVisible();
 		// await this.page.locator(locatorCommon.yesButton).click();
 		// await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.waitForTimeout(2000);
+		// await this.page.waitForTimeout(2000);
 
 	}
 
+	async Filter_Employee_Movement() {
+		console.log('-------------------------');
+		console.log('✅ Filter_Employee_Movement');
+		console.log('-------------------------');
+		await this.page.waitForTimeout(2000);
+
+		const movementPage = MovementPage(this.page);
+
+		const localStorage = await this.LoadLocalStorage();
+		if (!localStorage) {
+			console.log('No localStorage found');
+			return;
+		}
+
+		await this.page.locator(locatorCommon.empCode).click();
+		await this.page.keyboard.type(localStorage.EmpCode);  
+		await this.page.keyboard.press("Enter");
+		await this.page.locator(locatorCommon.goButton).click();
+		// await this.page.waitForTimeout(2000);
+
+	}
 
 
 }

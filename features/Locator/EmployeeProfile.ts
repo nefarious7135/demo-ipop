@@ -10,6 +10,7 @@ export const locatorEmp = {
     empLastName : "//input[@formcontrolname='newEmpLastName']",
     submitButton: "//button[@type='submit']",
     ddlemployee: "(//input[@role='combobox'])[2]",
-    yesButton: "//button[@id='yesButton']"
+    yesButton: "//button[@id='yesButton']",
+    empCodegen :"//input[@formcontrolname='newEmpCode']"
 
 }; 
