@@ -11,7 +11,4 @@ export const locatorCommon = {
     completedMessage: "//div[@id='stepDetailMessageDiv' and normalize-space()='This employee movement has been completed.']",
     browseOrg: "//button[@type='button' and (normalize-space()='Browse Org' or normalize-space()='เลือกหน่วยงาน')]",
     okButton: "//button[@type='button' and (normalize-space()='Ok' or normalize-space()='ตกลง')]"
-
-     //span[@class="mat-checkbox-label" and contains(text(),'00000114 - Talent Acquisition Manager')] 
-    //mat-checkbox[@id="mat-checkbox-120"]
 }; 

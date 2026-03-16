@@ -31,8 +31,6 @@ test.describe('Demo IPOP - Dev', () => {
     await Features.Fill_Time_ClockID_Table();
     await Features.Verify_Completed_Message();
 
-    
-    
   });
 
 
