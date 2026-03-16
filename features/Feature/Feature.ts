@@ -305,10 +305,15 @@ export class FeatureHelper {
 		await movementPage.Area(Add.Area);
 		await movementPage.Subarea(Add.Subarea);
 		await movementPage.Cost_Center(Add.Cost_Center);
+		// save
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-
+		const yesButton = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
+		// popup รอบสอง
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
 	}
 
 	async Fill_Personal_Data_Table() {
@@ -333,9 +338,13 @@ export class FeatureHelper {
 		await movementPage.Attachment_Type('Other Documents', data_doc.image.OtherDoc);
 		await movementPage.Attachment_Type('Official Documents', data_doc.image.OfficialDoc);
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.waitForTimeout(3000);
+		const yesButton = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
+		// popup รอบสอง
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
 	}
 
 	async Fill_Personal_ID_Table() {
@@ -362,8 +371,13 @@ export class FeatureHelper {
 		await movementPage.Attachment_Type('Employment Document', data_doc.image.EmploymentDoc);
 
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
+		const yesButton = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
+		// popup รอบสอง
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
 
 	}
 
@@ -415,7 +429,7 @@ export class FeatureHelper {
 		console.log('✅ Fill_Personal_Communication_Table');
 		console.log('-------------------------');
 		await this.page.waitForTimeout(2000);
-		
+
 		const element = this.page.locator(locatorEmp.email);
 
 		await this.page.waitForLoadState('networkidle');
@@ -428,8 +442,13 @@ export class FeatureHelper {
 		await movementPage.Email(Add.Email);
 
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
+		const yesButton = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
+		// popup รอบสอง
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
 	}
 
 	async Fill_Personal_Family_Table() {
@@ -449,8 +468,13 @@ export class FeatureHelper {
 		await movementPage.Family_Last_Name_EN(Name.lastNameEN);
 
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
+		const yesButton1 = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton1.waitFor({ state: 'visible' });
+		await yesButton1.click();
+		// popup รอบสอง
+		await yesButton1.waitFor({ state: 'visible' });
+		await yesButton1.click();
 
 		// Mother
 		await movementPage.Country(Add.Country);
@@ -462,9 +486,13 @@ export class FeatureHelper {
 		await movementPage.Family_Last_Name_EN(Name.lastNameEN);
 
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-
+		const yesButton2 = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton2.waitFor({ state: 'visible' });
+		await yesButton2.click();
+		// popup รอบสอง
+		await yesButton2.waitFor({ state: 'visible' });
+		await yesButton2.click();
 	}
 
 	async Fill_Personal_Date_Specification_Table() {
@@ -494,8 +522,13 @@ export class FeatureHelper {
 		await this.page.locator(locatorEmp.accountNumber).fill(localStorage.accountNumber);
 
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
+		const yesButton = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
+		// popup รอบสอง
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
 	}
 
 	async Fill_Basic_Pay_Table() {
@@ -508,8 +541,13 @@ export class FeatureHelper {
 		await movementPage.Amount(Add.Amount);
 
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
+		const yesButton = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
+		// popup รอบสอง
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
 	}
 
 	async Fill_Tax_Allowance_Table() {
@@ -519,7 +557,13 @@ export class FeatureHelper {
 		await this.page.waitForLoadState('networkidle');
 
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
+		const yesButton = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
+		// popup รอบสอง
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
 		await this.page.locator(locatorCommon.yesButton).click();
 	}
 
@@ -530,8 +574,13 @@ export class FeatureHelper {
 		await this.page.waitForLoadState('networkidle');
 
 		await this.page.locator(locatorCommon.saveButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
-		await this.page.locator(locatorCommon.yesButton).click();
+		const yesButton = this.page.getByRole('button', { name: 'Yes' }).first();
+		// popup รอบแรก
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
+		// popup รอบสอง
+		await yesButton.waitFor({ state: 'visible' });
+		await yesButton.click();
 	}
 
 	async Verify_Completed_Message() {

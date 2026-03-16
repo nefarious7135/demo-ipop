@@ -25,7 +25,7 @@ export default defineConfig({
     headless: true,
     actionTimeout: 10000,    // 🕒 timeout ของ action เช่น click(), fill()
     navigationTimeout: 40000,
-    trace: 'on-first-retry',
+    trace: 'on',
     // launchOptions: {
     //   slowMo: 1000, // 🐢 ลดความเร็วของการกระทำเพื่อให้เห็นชัดเจนขึ้น
     // }

@@ -7,3 +7,4 @@ node_modules/
 playwright-test.yml
 playwright-report
 test-summary-preview.md
+.DS_Store

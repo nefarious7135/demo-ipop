@@ -160,7 +160,6 @@ export const MovementPage = (page: Page) => ({
     Attachment_Type: async (Doctype: string, images: any) => {
         console.log('✅ Attachment_Type: ', Doctype);
         for (const image of images) {
-            console.log('image', image);
             await page.locator(locatorEmp.attachTypeCode).click();
             await page.getByRole('option', { name: Doctype }).click();
             await optional.attachFile(page, locatorEmp.fileName, image);
