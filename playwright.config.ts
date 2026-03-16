@@ -21,14 +21,14 @@ export default defineConfig({
   timeout: 200000, // 🕒 timeout ของ test ทั้งหมด
   use: {
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video: 'on',
     headless: true,
     actionTimeout: 10000,    // 🕒 timeout ของ action เช่น click(), fill()
     navigationTimeout: 40000,
     trace: 'on-first-retry',
-  //   launchOptions: {
-  //   slowMo: 500, // 🐢 ลดความเร็วของการกระทำเพื่อให้เห็นชัดเจนขึ้น
-  // }
+    // launchOptions: {
+    //   slowMo: 1000, // 🐢 ลดความเร็วของการกระทำเพื่อให้เห็นชัดเจนขึ้น
+    // }
   },
 
   /* Configure projects for major browsers */

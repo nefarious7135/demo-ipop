@@ -105,3 +105,69 @@ export function random4Chars(): string {
   return result;
 };
 
+export const optional = {
+  check: async (page: Page, selector: string, selectorIndex: number) => {
+    const elements = page.locator(selector);
+    const count = await elements.count();
+
+    if (count > selectorIndex) {
+      await elements.nth(selectorIndex).check({ force: true });
+    } else {
+      console.log(`skip "${selector}" on task`);
+    }
+  },
+
+  checkbox: async (page: Page, selector: string, selectorIndex: number = 0) => {
+    const elements = await page.$$(selector);
+    if (elements.length > selectorIndex) {
+      await elements[selectorIndex].check();
+    } else {
+      console.log(`🔚 skip ${selector}" on task`);
+    }
+  },
+
+  attachFile: async (page: Page,
+    selector: string,
+    pathFile: string,
+    selectorIndex: number = 0
+  ) => {
+    const elements = await page.locator(selector).elementHandles();
+
+    if (elements.length > selectorIndex) {
+      await page.locator(selector).setInputFiles(pathFile);
+    } else {
+      console.log(`🔚 skip ${selector}" at index "${selectorIndex}" on task`);
+    }
+  },
+};
+
+export function generateThaiIdCard(): string {
+  const digits: number[] = [];
+
+  // สุ่ม 12 หลักแรก
+  for (let i = 0; i < 12; i++) {
+    digits.push(Math.floor(Math.random() * 10));
+  }
+
+  // คำนวณ checksum
+  let sum = 0;
+  for (let i = 0; i < 12; i++) {
+    sum += digits[i] * (13 - i);
+  }
+
+  const checkDigit = (11 - (sum % 11)) % 10;
+
+  digits.push(checkDigit);
+
+  return digits.join('');
+}
+
+export function generateAccountNumber(length: number = 10): string {
+  let account = '';
+
+  for (let i = 0; i < length; i++) {
+    account += Math.floor(Math.random() * 10);
+  }
+
+  return account;
+}
